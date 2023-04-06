@@ -1,0 +1,60 @@
+---
+title: Did NextJS 13 Break State Management?
+publishedAt: 2023-01-17T16:04:43Z
+thumbnails:
+  default:
+    url: https://i.ytimg.com/vi/OpMAH2hzKi8/default.jpg
+    width: 120
+    height: 90
+  medium:
+    url: https://i.ytimg.com/vi/OpMAH2hzKi8/mqdefault.jpg
+    width: 320
+    height: 180
+  high:
+    url: https://i.ytimg.com/vi/OpMAH2hzKi8/hqdefault.jpg
+    width: 480
+    height: 360
+  standard:
+    url: https://i.ytimg.com/vi/OpMAH2hzKi8/sddefault.jpg
+    width: 640
+    height: 480
+  maxres:
+    url: https://i.ytimg.com/vi/OpMAH2hzKi8/maxresdefault.jpg
+    width: 1280
+    height: 720
+tags:
+  - next 13
+  - nextjs 13
+  - next.js 13
+  - next js 13
+  - zustand
+  - nextjs 13 zustand
+  - next 13 zustand
+  - nextjs react 18
+  - mui nextjs
+  - vite nextjs
+  - nextjs middleware
+  - nextjs 13 state management
+  - next 13 state management
+  - next 13 store
+  - next js 13 store
+  - next
+  - nextjs
+  - next js
+  - next.js
+  - nextjs react
+  - nextjs typescript
+  - nextjs api
+  - next js typescript
+  - nextjs npm
+privacyStatus: public
+short: false
+---
+  
+NextJS 13 changes the state management game. We now have to support two different ways to get state for React Server Components (RSC) and the traditional client components.
+
+Don't do this:
+
+```ts
+import { create } from 'zustand';
+```

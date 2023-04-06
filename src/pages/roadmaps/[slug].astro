@@ -1,0 +1,34 @@
+---
+export const prerender = true;
+
+import { CollectionEntry, getCollection, getEntry } from 'astro:content'
+
+import Layout from '../../layouts/Layout.astro';
+import VideoGrid from '../../components/VideoGrid';
+import createSlug from '../../lib/createSlug';
+
+export async function getStaticPaths() {
+  const roadmap = await getCollection('roadmaps')
+  return roadmap.map((roadmap) => ({
+    params: { slug: createSlug(roadmap.data.title) },
+    props: roadmap
+  }))
+}
+
+type Props = CollectionEntry<'roadmaps'>
+const { data, render } = Astro.props
+
+type VideoId = Pick<CollectionEntry<'videos'>, "id">["id"];
+
+const videos = await Promise.all(data.videos.map((video) => getEntry('videos', video as unknown as VideoId)))
+
+const { Content } = await render()
+---
+
+<Layout>
+  <div class="prose prose-xl">
+    <Content />
+  </div>
+
+  <VideoGrid videos={videos} />
+</Layout>

@@ -1,0 +1,29 @@
+---
+title: Live! | Fixing useContext with react-tracked
+publishedAt: 2021-01-16T08:42:43Z
+thumbnails:
+  default:
+    url: https://i.ytimg.com/vi/4wfqc7roa0Q/default.jpg
+    width: 120
+    height: 90
+  medium:
+    url: https://i.ytimg.com/vi/4wfqc7roa0Q/mqdefault.jpg
+    width: 320
+    height: 180
+  high:
+    url: https://i.ytimg.com/vi/4wfqc7roa0Q/hqdefault.jpg
+    width: 480
+    height: 360
+  standard:
+    url: https://i.ytimg.com/vi/4wfqc7roa0Q/sddefault.jpg
+    width: 640
+    height: 480
+  maxres:
+    url: https://i.ytimg.com/vi/4wfqc7roa0Q/maxresdefault.jpg
+    width: 1280
+    height: 720
+privacyStatus: public
+short: false
+---
+  
+React's useState/useContext pairing is easy to use but its got performance issues. Let's look at Daishi Kato's react-tracked library and see if we can still use our existing context code, but make it more efficient by only updating components that depend on specific elements of the state tree.
